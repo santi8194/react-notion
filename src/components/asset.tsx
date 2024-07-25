@@ -15,12 +15,8 @@ const Asset: React.FC<{
   }
 
   const format = value.format;
-  const {
-    display_source = undefined,
-    block_aspect_ratio = undefined,
-    block_height = 1,
-    block_width = 1
-  } = format ?? {};
+  const { block_aspect_ratio = undefined, block_height = 1, block_width = 1 } =
+    format ?? {};
 
   const aspectRatio = block_aspect_ratio || block_height / block_width;
 
@@ -34,9 +30,7 @@ const Asset: React.FC<{
       >
         <iframe
           className="notion-image-inset"
-          src={
-            value.properties.source[0][0]
-          }
+          src={value.properties.source[0][0]}
         />
       </div>
     );
